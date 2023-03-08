@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  height: 6000px;
+}
+div {
+  margin-top: 1000px;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  opacity: 0;
+  transition: all 1s;
+}

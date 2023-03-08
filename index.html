@@ -11,5 +11,25 @@
     <link rel="stylesheet" href="./css/main.css" />
     <script src="/js/common.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div><p>1</p></div>
+    <div><p>2</p></div>
+    <div><p>3</p></div>
+    <div><p>4</p></div>
+
+    <script>
+      let observer = new IntersectionObserver((e) => {
+        e.forEach((s) => {
+          if (s.isIntersecting) {
+            s.target.style.opacity = 1
+          } else {
+            s.target.style.opacity = 0
+          }
+        })
+      })
+      let div = document.querySelectorAll('div')
+      observer.observe(div[0])
+      observer.observe(div[1])
+    </script>
+  </body>
 </html>
